@@ -2,6 +2,8 @@
 
 This Blender addon allows you to import points from a CSV file and create a mesh with connected edges. It's particularly useful for visualizing 3D point data captured using tools like 'RenderDoc' to export the cvs file.
 
+! At the moment it just creates edges not faces, you will need to select everything and fill in the faces manually. This is a pet projected made by myself to better understand 3d game development. Let me know with any questions, updates, or issue.
+
 ## Features
 - Import vertex points from a CSV file.
 - Create a mesh with connected edges based on the imported points.
