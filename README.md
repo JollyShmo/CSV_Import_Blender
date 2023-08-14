@@ -22,4 +22,4 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 - Category: Import-Export
 
 Please note that this addon creates a mesh with connected edges based on the imported points. It's important to review the results and refine the mesh as needed after import.
-For more information, visit the [Blender Addon Documentation](https://www.blender.org) and [RenderDoc](https://renderdoc.org/).
+For more information, visit the [Blender](https://www.blender.org) and [RenderDoc](https://renderdoc.org/).
