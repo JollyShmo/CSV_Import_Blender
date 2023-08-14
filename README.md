@@ -11,7 +11,7 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 - Provides a simple way to visualize point data in Blender's 3D view.
 
 ## Usage
-1. Download the `csv_mesh_importer.zip`.
+1. Download by clicking `Code <>` > `Download Zip`.
 2. In Blender, open the 'Edit' menu, select 'Preferences', and navigate to the 'Add-ons' section.
 3. Click the 'Install' button and choose the `csv_mesh_importer.zip` file.
 4. Enable the addon by checking the corresponding checkbox.
