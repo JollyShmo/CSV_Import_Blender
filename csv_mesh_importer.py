@@ -2,14 +2,15 @@ import bpy
 import csv
 import bmesh
 from bpy_extras.io_utils import ImportHelper
+from mathutils import Matrix
 
 bl_info = {
     "name": "CSV Mesh Importer",
     "author": "Jolly Joe",
-    "version": (1, 0),
+    "version": (1, 5),
     "blender": (3, 5, 0),
     "location": "File > Import",
-    "description": "Import points from a CSV file and create a mesh with connected edges. I used 'RenderDoc' capture and saved the cvs file. You are able to import the modles vertex points and connect them (some unwanted edges will be made, not fully tested).",
+    "description": "Import points from a CSV file and create a mesh with connected edges. Works alongside 'RenderDoc' exporting the cvs file.",
     "category": "Import-Export",
 }
 
@@ -23,6 +24,12 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
         options={'HIDDEN'},
         maxlen=255,
     )
+    
+    scale_factor: bpy.props.FloatProperty(
+        name="Scale Factor",
+        default=1.0,
+        description="Scale the imported mesh",
+    )
 
     def execute(self, context):
         try:
@@ -31,9 +38,9 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
                 next(reader)  # Skip the header line
                 vertices = []
                 for row in reader:
-                    if len(row) >= 6:  # Make sure the row has at least 6 values (POSITION 0, POSITION 1, POSITION 2)
-                        x, y, z = map(float, row[2:5])  # Assuming POSITION 0, POSITION 1, POSITION 2 columns
-                        vertices.append((x, y, z))
+                    if len(row) >= 7:  # Make sure the row has at least 7 values (POSITION 0, POSITION 1, POSITION 2, SV_Position.w)
+                        x, y, z, w = map(float, row[2:6])  # Assuming POSITION 0, POSITION 1, POSITION 2, SV_Position.w columns
+                        vertices.append((x * self.scale_factor, y * self.scale_factor, z * self.scale_factor))
 
                 # Create a new mesh
                 mesh = bpy.data.meshes.new("CSV_Mesh")
@@ -70,6 +77,25 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
                 bpy.ops.mesh.select_all(action='DESELECT')
                 bpy.ops.object.mode_set(mode='OBJECT')
 
+                # Show CSV plot points in a text window
+                bpy.ops.text.new()
+                text = bpy.data.texts[-1]
+                for vertex in vertices:
+                    text.write("Vertex: {}\n".format(vertex))
+                
+                # Set dimensions to (1, 1, 1) before scaling
+                
+                
+                # Set the scale to 1 and relocate object to center
+                bpy.ops.object.select_all(action='DESELECT')
+                obj.select_set(True)
+                bpy.context.view_layer.objects.active = obj
+                bpy.ops.object.origin_set(type='ORIGIN_GEOMETRY', center='BOUNDS')
+                obj.scale = (1, 1, 1)
+                obj.location = (0, 0, 0)
+                obj.dimensions = (1, 1, 1)
+                obj.rotation_euler = (90, 0, 0)
+                
         except Exception as e:
             self.report({'ERROR'}, str(e))
             return {'CANCELLED'}
