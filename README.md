@@ -19,7 +19,7 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 
 ## Credits
 - Author: Jolly Joe
-- Version: 1.5
+- Stable Version: 1.5
 - Blender Compatibility: 2.93 or later
 - Category: Import-Export
 
