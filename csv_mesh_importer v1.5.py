@@ -93,8 +93,7 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
                 bpy.ops.object.origin_set(type='ORIGIN_GEOMETRY', center='BOUNDS')
                 obj.scale = (1, 1, 1)
                 obj.location = (0, 0, 0)
-                obj.dimensions = (1, 1, 1)
-                obj.rotation_euler = (90, 0, 0)
+                obj.rotation_euler (0, 0, 0)
                 
         except Exception as e:
             self.report({'ERROR'}, str(e))
