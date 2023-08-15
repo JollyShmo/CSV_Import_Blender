@@ -1,27 +1,33 @@
 # CSV Mesh Importer Blender Addon
 
-This Blender addon allows you to import points from a CSV file and create a mesh with connected edges. It's particularly useful for visualizing 3D point data captured using tools like 'RenderDoc' to export the cvs file.
+This Blender addon allows you to import points from a CSV file and create a mesh with connected edges or faces. It's particularly useful for visualizing 3D point data captured using tools like 'RenderDoc' to export the CSV file.
 
-! At the moment it just creates edges not faces, you will need to select everything and fill in the faces manually. This is a pet projected made by myself to better understand 3d game development. Let me know with any questions, updates, or issue.
+**Note:** This addon now supports both edge and face connections. You can choose between the two connection methods during import. The addon also provides an option to automatically clean up lines that are only connected to points without faces attached.
 
 ## Features
 - Import vertex points from a CSV file.
-- Create a mesh with connected edges based on the imported points.
+- Create a mesh with connected edges or faces based on the imported points.
 - Automatically remove duplicate vertices.
+- Optionally clean up lines connected to points without faces attached.
 - Provides a simple way to visualize point data in Blender's 3D view.
 
 ## Usage
-1. Download by clicking `Code <>` > `Download Zip`.
+1. Download the addon by clicking `Code <>` > `Download Zip`.
 2. In Blender, open the 'Edit' menu, select 'Preferences', and navigate to the 'Add-ons' section.
-3. Click the 'Install' button and choose the `CSV_Import_Blender-main.zip` file.
+3. Click the 'Install' button and choose the downloaded `CSV_Import_Blender-main.zip` file.
 4. Enable the addon by checking the corresponding checkbox.
 5. Now, you can import CSV files containing vertex data by going to 'File > Import' and selecting 'CSV Mesh (.csv)'.
 
+## Options
+- **Connection Method:** Choose between connecting vertices with edges or faces.
+- **Scale Factor:** Scale the imported mesh.
+- **Cleanup Lines:** If enabled, automatically clean up lines connected to points without faces.
+
 ## Credits
 - Author: Jolly Joe
-- Stable Version: 1.5
+- Stable Version: 2.0
 - Blender Compatibility: 2.93 or later
 - Category: Import-Export
 
-Please note that this addon creates a mesh with connected edges based on the imported points. It's important to review the results and refine the mesh as needed after import.
+Please note that this addon creates a mesh with connected edges or faces based on the imported points. It's important to review the results and refine the mesh as needed after import.
 For more information, visit [Blender](https://www.blender.org) and [RenderDoc](https://renderdoc.org/).
