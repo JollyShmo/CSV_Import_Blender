@@ -7,17 +7,17 @@ from mathutils import Matrix
 bl_info = {
     "name": "CSV Mesh Importer",
     "author": "Jolly Joe",
-    "version": (1, 5),
+    "version": (2, 0),
     "blender": (3, 5, 0),
     "location": "File > Import",
-    "description": "Import points from a CSV file and create a mesh with connected edges. Works alongside 'RenderDoc' exporting the cvs file.",
+    "description": "Import points from a CSV file and create a mesh with connected edges or faces.",
     "category": "Import-Export",
 }
 
 class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
     bl_idname = "import_mesh.csv"
     bl_label = "Import CSV Mesh"
-    bl_description = "Import points from a CSV file and create a mesh with connected edges"
+    bl_description = "Import points from a CSV file and create a mesh with connected edges or faces"
 
     filter_glob: bpy.props.StringProperty(
         default="*.csv",
@@ -29,6 +29,16 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
         name="Scale Factor",
         default=1.0,
         description="Scale the imported mesh",
+    )
+    
+    connection_method: bpy.props.EnumProperty(
+        name="Connection Method",
+        items=[
+            ('EDGES', "Edges", "Connect vertices with edges"),
+            ('FACES', "Faces", "Connect vertices with faces"),
+        ],
+        default='EDGES',
+        description="Method for connecting vertices"
     )
 
     def execute(self, context):
@@ -52,11 +62,16 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
                 for vertex in vertices:
                     bm.verts.new(vertex)
 
-                # Connect the vertices to create edges
+                # Connect the vertices based on the selected connection method
                 bm.verts.ensure_lookup_table()
-                bm.edges.ensure_lookup_table()
-                for i in range(len(vertices) - 1):
-                    bm.edges.new((bm.verts[i], bm.verts[i + 1]))
+                if self.connection_method == 'EDGES':
+                    for i in range(len(vertices) - 1):
+                        bm.edges.new((bm.verts[i], bm.verts[i + 1]))
+                elif self.connection_method == 'FACES':
+                    if len(vertices) >= 3:
+                        # Triangulate faces around the points
+                        for i in range(len(vertices) - 2):
+                            bm.faces.new((bm.verts[i], bm.verts[i + 1], bm.verts[i + 2]))
 
                 # Update the BMesh and populate the mesh with BMesh data
                 bm.to_mesh(mesh)
@@ -70,30 +85,29 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
                 bpy.context.view_layer.objects.active = obj
                 obj.select_set(True)
 
-                # Enter edit mode and remove duplicate vertices
+                # Recalculate normals
                 bpy.ops.object.mode_set(mode='EDIT')
                 bpy.ops.mesh.select_all(action='SELECT')
-                bpy.ops.mesh.remove_doubles()
-                bpy.ops.mesh.select_all(action='DESELECT')
+                bpy.ops.mesh.normals_make_consistent(inside=False)
                 bpy.ops.object.mode_set(mode='OBJECT')
 
-                # Show CSV plot points in a text window
-                bpy.ops.text.new()
-                text = bpy.data.texts[-1]
-                for vertex in vertices:
-                    text.write("Vertex: {}\n".format(vertex))
-                
-                # Set dimensions to (1, 1, 1) before scaling
-                
-                
-                # Set the scale to 1 and relocate object to center
+                # Set object origin and scale
                 bpy.ops.object.select_all(action='DESELECT')
                 obj.select_set(True)
                 bpy.context.view_layer.objects.active = obj
                 bpy.ops.object.origin_set(type='ORIGIN_GEOMETRY', center='BOUNDS')
                 obj.scale = (1, 1, 1)
-                obj.location = (0, 0, 0)
-                obj.rotation_euler (0, 0, 0)
+            # Merge by distance
+            bpy.ops.object.mode_set(mode='EDIT')
+            bpy.ops.mesh.select_all(action='SELECT')
+            bpy.ops.mesh.remove_doubles(threshold=0.001)
+            bpy.ops.object.mode_set(mode='OBJECT')
+            
+            # Show CSV plot points in a text window
+            bpy.ops.text.new()
+            text = bpy.data.texts[-1]
+            for vertex in vertices:
+                text.write("Vertex: {}\n".format(vertex))
                 
         except Exception as e:
             self.report({'ERROR'}, str(e))
