@@ -1,4 +1,5 @@
 # CSV Mesh Importer Blender Addon
+### 
 
 This Blender addon allows you to import points from a CSV file and create a mesh with connected edges or faces. It's particularly useful for visualizing 3D point data captured using tools like 'RenderDoc' to export the CSV file.
 
@@ -16,15 +17,18 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 3. Click the 'Install' button and choose the downloaded `CSV_Import_Blender-main.zip` file.
 4. Now, you can import CSV files containing vertex data by going to 'File > Import' and selecting 'CSV Mesh (.csv)'.
 
+## Tools Needed
+- [Blender](https://www.blender.org): The open-source 3D creation suite used to run the addon.
+- [RenderDoc](https://renderdoc.org/): A graphics debugger, which can be used to export the CSV files for importing.
+
 ## Options
 - **Scale Factor:** Scale the imported mesh.
 - **Connection Method:** Choose between connecting vertices with edges or faces.
 
 ## Credits
 - Author: Jolly Joe
-- Stable Version: 2.0
+- Stable Version: 4.0
 - Blender Compatibility: 2.93 or later
-- Category: Import-Export
+- Category: Import
 
-Please note that this addon creates a mesh with connected edges or faces based on the imported points. It's important to review the results and refine the mesh as needed after import.
-For more information, visit [Blender](https://www.blender.org) and [RenderDoc](https://renderdoc.org/).
+Please note that this addon creates a mesh with connected edges or faces based on the imported points. It's important to review the results and refine the mesh as needed after import. This is optimized for Stubbs The Zombie and We Happy Few, csv files come from RenderDoc exports. More information coming soon.
