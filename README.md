@@ -6,10 +6,10 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 **Note:** This addon now supports both edge and face connections. You can choose between the two connection methods during import.
 
 ## Features
-- Import vertex points from a CSV file.
+- Import vertex plot points from a CSV file as a mesh.
 - Create a mesh with connected edges or faces based on the imported points.
 - Automatically remove duplicate vertices.
-- Provides a simple way to visualize point data in Blender's 3D view.
+- Corrects the normals to face out.
 
 ## Usage
 1. Download the addon by clicking `Code <>` > `Download Zip`.
@@ -27,8 +27,8 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 
 ## Credits
 - Author: Jolly Joe
-- Stable Version: 4.0
+- Stable Version: 4.2.1
 - Blender Compatibility: 2.93 or later
 - Category: Import
 
-Please note that this addon creates a mesh with connected edges or faces based on the imported points. It's important to review the results and refine the mesh as needed after import. This is optimized for Stubbs The Zombie and We Happy Few, csv files come from RenderDoc exports. More information coming soon.
+Please note: This addon creates a mesh with connected edges or faces based on the imported points. It's important to review the results and refine the mesh as needed after import. This is optimized for `Bioshock Remastered 1 & 2 & Infinte, Stubbs The Zombie, We Happy Few` csv files come from RenderDoc exports. 
