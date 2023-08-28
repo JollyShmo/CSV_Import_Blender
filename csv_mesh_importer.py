@@ -139,6 +139,8 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
         name="Set TEXCOORD.z = 1.0",
         default=True,
         description="Set texture Coordinate to Z = 1.0",
+        options={'HIDDEN'},
+
     )
     smooth_finish: bpy.props.BoolProperty(
         name="Shade Smooth",
@@ -149,7 +151,7 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
         name="CSV Format",
         items=[
             ('STUBBS', "Stubbs The Zombie", "CSV format for STZ"),
-            ('WE_HAPPY_FEW', "WHF + Bioshock", "CSV format that uses POS first"),
+            ('WE_HAPPY_FEW', "Bioshock 1 & 2 + WHF +", "CSV format that uses POS first"),
             ('BIOSHOCK', "Bioshock INF +", "CSV format that use TAN first"),
             ('OTHER', "Other", "For any csv file with x, y, z"),       
         ],
@@ -157,10 +159,10 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
         description="Choose the CSV format",
     )
     beta_test: bpy.props.EnumProperty(
-        name="New Feature",
+        name="Beta:",
         items=[
-            ('NONE', "OFF", "None"),
-            ('BETA', "ON", "Testing"),
+            ('NONE', "UV testing OFF", "No testing"),
+            ('BETA', "UV testing ON", "UV testing"),
         ],
         default='BETA',
         description="Testing and Debugging"
@@ -199,7 +201,11 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
         layout.prop(self, "cleanup_check")
         layout.prop(self, "smooth_finish")
         layout.prop(self, "center_obj")
-        layout.prop(self, "beta_test")
+        
+        if self.csv_format == 'STUBBS':
+            layout.prop(self, "beta_test")
+        else:
+            self.beta_test = 'NONE'
         
         if self.csv_format == 'OTHER':
             layout.prop(self, "pos_x_column")
@@ -208,9 +214,10 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
             layout.prop(self, "hide_option_uv")
             
             if self.hide_option_uv:
+                self.set_z = True
                 layout.prop(self, "pos_ux_column")
                 layout.prop(self, "pos_uy_column")          
-                layout.prop(self, "set_z")
+                #layout.prop(self, "set_z")
             else:
                 self.set_z = False
 
@@ -418,6 +425,16 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
             # Inside the beta testing section
             if self.beta_test == 'BETA':
                 self.report({'INFO'}, "This is beta ON.")
+                # Step 1: Get the active object
+                active_obj = bpy.context.active_object
+
+                # Step 3: Switch to Edit Mode and perform smart UV unwrapping
+                bpy.context.view_layer.objects.active = active_obj
+                bpy.ops.object.mode_set(mode='EDIT')
+                bpy.ops.mesh.select_all(action='SELECT')
+                bpy.ops.uv.smart_project(angle_limit=66, island_margin=0.001)
+                bpy.ops.object.mode_set(mode='OBJECT')
+                
                 
             else:
                 self.report({'WARNING'}, "This is beta OFF")                
