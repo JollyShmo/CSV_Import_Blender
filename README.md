@@ -25,7 +25,9 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 ## Options
 - **Scale Factor:** Scale the imported mesh.
 - **Connection Method:** Choose between connecting vertices with edges or faces.
-
+- **Format** Choose between game sets or other. (Stubbs the Zombie, Bioshock 1 & 2 + WHF, Bioshock Infinite)
+- **UV smart Unwrapping** just does a unwrap, wanting to use the info from the csv file (under construction)
+ 
 ## Credits
 - Author: Jolly Joe
 - Stable Version: 4.2.1
