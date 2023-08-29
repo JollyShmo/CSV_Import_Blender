@@ -7,11 +7,12 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 
 ## Features
 - Import vertex plot points from a CSV file as a mesh.
-- Create a mesh with connected edges or faces based on the imported points.
-- Automatically remove duplicate vertices.
-- Corrects the normals to face out.
+- Creates a mesh with connected edges or faces based on the imported points.
+- Automatically remove duplicate vertices and edges.
+- Corrects the normals to face outside.
+- Ability to use debug with Other
 
-## Usage
+## Install and Usage
 1. Download the addon by clicking `Code <>` > `Download Zip`.
 2. In Blender, open the 'Edit' menu, select 'Preferences', and navigate to the 'Add-ons' section.
 3. Click the 'Install' button and choose the downloaded `CSV_Import_Blender-main.zip` file.
@@ -26,7 +27,7 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 - **Scale Factor:** Scale the imported mesh.
 - **Connection Method:** Choose between connecting vertices with edges or faces.
 - **Format:** Choose between game sets or other. (Stubbs the Zombie, Bioshock 1 & 2 + WHF, Bioshock Infinite)
-- **UV smart Unwrapping:** just does a unwrap, wanting to use the info from the csv file (under construction)
+- **UV smart Unwrapping:** just does a unwrap, wanting to use the info from the csv file (under construction only for Stubbs atm)
  
 ## Credits
 - Author: Jolly Joe
