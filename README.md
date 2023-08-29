@@ -30,7 +30,7 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 - **UV smart Unwrapping:** just does a unwrap, wanting to use the info from the csv file (under construction only for Stubbs atm)
  
 ## Credits
-- Author: Jolly Joe
+- Author: `Jolly Joe`
 - Stable Version: 4.2.1
 - Blender Compatibility: 2.93 or later
 - Category: Import
