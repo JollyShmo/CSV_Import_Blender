@@ -30,7 +30,7 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 
 ## Options
 <details>
- <summary>⚙</summary>
+ <summary>⚙ Addon Options</summary>
  
 - **`Scale Factor`** Scale the imported mesh. (0.01 - 10.00)
 - **`Connection Method`** Choose between connecting vertices with edges or faces.
