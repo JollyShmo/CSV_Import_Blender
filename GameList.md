@@ -4,7 +4,7 @@
 ➕
 `CSV Mesh Importer (blender addon)`
 
-- Bendy
+- Bendy and the Dark Revival
 - Bioshock 1
 - Bioshock 2
 - Bioshock Infinite
