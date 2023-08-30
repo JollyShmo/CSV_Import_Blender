@@ -75,6 +75,7 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 
 > Center Object: `optional`
 </details> 
+
 ## Credits
 - Author: `Jolly Joe`
 - Stable Version: 4.2.1
