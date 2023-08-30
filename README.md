@@ -35,8 +35,8 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 - Blender Compatibility: 2.93 or later
 - Category: Import
 
-`note:` This addon creates a mesh with connected edges or faces based on the imported points. It's important to review the results and refine the mesh as needed after import. This is optimized for `Bioshock Remastered 1 & 2 & Infinte, Stubbs The Zombie, We Happy Few` while using RenderDoc csv exports.
+`note:` This addon creates a mesh with connected edges or faces based on the imported points. It's important to review the results and refine the mesh as needed after import. This is optimized for `Bioshock Remastered 1 & 2 & Infinte, Stubbs The Zombie, We Happy Few` while using `RenderDoc` csv exports.
 
-`note:` When trying a new game not listed try it under `Bioshock 1&2 + WHF +` with the rest at default, if that doesn't work you can use `Other` to pin point the verts. 
+`note:` `'Bioshock 1 & 2 + WHF +' should be the default when trying a new game not listed` [`game list`](https://).
 
-`note:` `Bioshock INF + is only last resort its better to use Other in some cases.`
+`note:` `'Bioshock INF +' is only last resort its better to use Other in some cases.`
