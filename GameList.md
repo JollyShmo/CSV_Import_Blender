@@ -16,6 +16,14 @@
 | We Happy Few |😀|
 | We Were Here | `MENU` |
   
-*(Game not on the list? it mean I don't have a copy to try or it didn't work for me)*
-
-**[MENU] - was able to use in menu*
+*(Game not on the list? it mean I don't have a copy to try or it didn't work for me in `RenderDoc`)*
+| Game Title | Status |
+|---|:---:|
+| GTA III |😣|
+| GTA VC |😣|
+| GTA SA |😣|
+| Half Life 1 |😣|
+| Half Life 2 |😣|
+| Black Mesa |😣|
+| Pychonauts |😣|
+| Jet Set Radio Future |😣|
