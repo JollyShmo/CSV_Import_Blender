@@ -1,5 +1,5 @@
-# Game List
-`RenderDoc` + `CSV Importer addon`
+# Gmaes List
+`RenderDoc` + `CSV Importer (blender addon)`
 - Bendy
 - Bioshock 1
 - Bioshock 2
