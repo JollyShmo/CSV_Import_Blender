@@ -15,9 +15,9 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 - [`RenderDoc`](https://renderdoc.org/) A graphics debugger, which can be used to export the CSV files for importing.
 
 ## Install Addon and Usage
-1. Download the addon by clicking `Code <>` > `Download Zip`.
-2. In Blender, open the 'Edit' menu, select 'Preferences', and navigate to the 'Add-ons' section.
-3. Click the 'Install' button and choose the downloaded `CSV_Import_Blender-main.zip` file.
+1. Download the addon by clicking the header CSV Mesh Importer picutre.
+2. In Blender, `Edit > Preferences > Add-ons > Install`
+3. Click the 'Install' button and choose the downloaded `csv_mesh_importer.zip` file.
 4. Check the box to have it apply the changes.
 5. Now, you can import CSV files containing vertex data by going to `File > Import' > 'CSV Mesh (.csv)`.
 
