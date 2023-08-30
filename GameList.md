@@ -8,4 +8,4 @@
 - Sludge Life 2
 - Stubbs The Zombie
 - We Happy Few
-- We Were Here (menu) (need 2nd player)
+- We Were Here `([MENU])`
