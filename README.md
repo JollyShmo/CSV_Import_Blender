@@ -17,12 +17,12 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 - Ability to select what column from the csv files for the coords for `POSITION.x, POSITION.y, POSITION.z` plus an option for 2 additional coords I call `POSITION.ux, POSITION.uy`. (This can be found in `Other`)
 
 ## Programs
-| Blender |
+| Blender 3.6 |
 |:---------|
 🌐 [`Blender website`](https://www.blender.org)
 💾 [Download Blender](https://www.blender.org/download/release/Blender3.6/blender-3.6.2-windows-x64.msi/) The open-source 3D creation suite used to run the addon.
 
-| RenderDoc |
+| RenderDoc 1.28 |
 |:-----------|
 🌐 [`RenderDoc website`](https://renderdoc.org/)
 💾 [Download RenderDoc x64](https://renderdoc.org/stable/1.28/RenderDoc_1.28_64.msi) A graphics debugger, which can be used to export the CSV files for importing to Blender.
