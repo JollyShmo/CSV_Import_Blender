@@ -42,9 +42,9 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 - Scale: `10.0`
 - Connection Method: `Faces`
 - Format: `Stubbs The Zombie`
-- Auto-Smooth: `optional` `Auto-Smooth Shading 30°`
+- Auto-Smooth: `optional` `auto-smooth shading 30°`
 - Center Object: `optional`
-- Beta: UV Unwrapping: `optional` `Smart UV Unwraps`
+- Beta: UV Unwrapping: `optional` `smart uv unwraps`
 </details>
 
 <details>
@@ -53,8 +53,8 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 - Scale: `0.01` - `1.0`
 - Connection Method: `Faces`
 - Format: `Bioshock 1 & 2 + WHF +`
-- Auto-Smooth: `optional` `Auto-Smooth Shading 30°`
-- Center Object: `optional`
+- Auto-Smooth: `optional` `auto-smooth shading 30°`
+- Center Object: `optional` `mesh to 3d curser`
 </details>
 
 <details>
@@ -67,9 +67,9 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 
 > Format: `Bioshock 1 & 2 + WHF +`
 
-> Auto-Smooth: `optional` `Auto-Smooth Shading 30°`
+> Auto-Smooth: `optional` `auto-smooth shading 30°`
 
-> Center Object: `optional`
+> Center Object: `optional` `mesh to 3d curser`
 </details> 
 
 ## Credits
