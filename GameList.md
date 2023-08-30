@@ -9,4 +9,4 @@
 - Stubbs The Zombie
 - We Happy Few
 - We Were Here `[MENU]`
-+ more to come
+`more to come`
