@@ -13,3 +13,7 @@
 - Stubbs The Zombie
 - We Happy Few
 - We Were Here `[MENU]`
+  
+*(Game not on the list? it mean I don't have a copy to try or it didn't work for me)*
+
+**[MENU] - was able to use in menu*
