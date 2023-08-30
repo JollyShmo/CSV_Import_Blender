@@ -29,13 +29,18 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 5. Now, you can import CSV files containing vertex data by going to `File > Import' > 'CSV Mesh (.csv)`.
 
 ## Options
+<details>
+ <summary>⚙</summary>
+ 
 - **`Scale Factor`** Scale the imported mesh. (0.01 - 10.00)
 - **`Connection Method`** Choose between connecting vertices with edges or faces.
 - **`Format`** Choose between game sets or other. (Stubbs the Zombie, Bioshock 1 & 2 + WHF +, Bioshock INF +, Other)
 - **`Auto-Smooth(checkbox)`** Have it use the default auto-smooth shading on import.
 - **`Center Object(checkbox)`** This will center the object base on origin (middle of mesh usually) if unchecked it will be the coords from the RenderDoc capture location or default.
 - **`UV smart Unwrapping(checkbox)`** just does a smart unwrap (only for Stubbs The Zombie atm)
+</details>
 
+## Formats
 <details>
 <summary>Stubbs the Zombie</summary>
 
@@ -80,11 +85,15 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 - Blender Compatibility: 2.93 or later
 - Category: Import
 
+<details>
+ <summary>More Info:</summary>
+ 
 `note:` ```This addon creates a mesh with connected edges or faces based on the imported points. It's important to review the results and refine the mesh as needed after import. This is optimized for games that work with RenderDoc and the csv files it can export.```
 
 `note:` `'Bioshock 1 & 2 + WHF +' should be the default when trying a new game not listed.` 
 
 `note:` `'Bioshock INF +' is only last resort its better to use Other in some cases.`
+</details>
 
 [Game ⚙ List](/GameList.md)
 
