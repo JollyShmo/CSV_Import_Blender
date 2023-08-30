@@ -6,7 +6,7 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 | RenderDoc| Blender|
 | ---------| -------|
 | ![Image 1](https://github.com/JollyShmo/CSV_Import_Blender/blob/main/step1.png)    | ![Image 2](https://github.com/JollyShmo/CSV_Import_Blender/blob/main/step2%20(2).png?raw=true)    |
-| Caption for Image 1 | Caption for Image 2 |
+|`Export` the VS Input csv file | `Import` the csv file into Blender |
 
 ## Features
 - Import vertex plot points from a CSV file as a mesh.
