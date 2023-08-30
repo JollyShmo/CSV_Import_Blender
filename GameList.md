@@ -1,7 +1,9 @@
 # Games That Work
-`RenderDoc (csv file export)` + 
+`RenderDoc (csv file)` 
 
-`CSV Importer (blender 3d mesh import)`
++ 
+
+`CSV Mesh Importer (blender addon)`
 
 - Bendy
 - Bioshock 1
@@ -12,5 +14,3 @@
 - Stubbs The Zombie
 - We Happy Few
 - We Were Here `[MENU]`
-
-`more to come`
