@@ -34,10 +34,10 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 - **`Center Object(checkbox)`** This will center the object base on origin (middle of mesh usually) if unchecked it will be the coords from the RenderDoc capture location or default.
 - **`UV smart Unwrapping`** just does a unwrap, wanting to use the info from the csv file (under construction only for Stubbs atm)
 
-### Stubbs the Zombie
+
 
 <details>
-<summary>Settings:</summary>
+<summary>Stubbs the Zombie</summary>
 
 - Scale: `10.0`
 - Connection Method: `Faces`
@@ -47,10 +47,8 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 - Beta: UV Unwrapping: `optional` `Smart UV Unwraps`
 </details>
 
-### Bioshock 1 & 2 + WHF + 
-
 <details>
-<summary>Settings:</summary>
+<summary>Bioshock 1 & 2 + WHF +</summary>
 
 - Scale: `0.01` - `1.0`
 - Connection Method: `Faces`
@@ -59,10 +57,8 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 - Center Object: `optional`
 </details>
 
-### Bioshock INF +
-
 <details>
-<summary>Settings:</summary>
+<summary>Bioshock INF +</summary>
 
  `beta`
 > Scale: `0.01` - `1.0`
