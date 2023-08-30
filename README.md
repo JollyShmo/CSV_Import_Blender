@@ -3,6 +3,11 @@ click to download addon>>
 
 This Blender addon allows you to import points from a CSV file and create a mesh by connected edges or faces. It's particularly useful for visualizing 3D point data captured using tools like 'RenderDoc' to export the CSV file.
 
+| Image 1             | Image 2             |
+| ------------------- | ------------------- |
+| ![Image 1](#)    | ![Image 2](#)    |
+| Caption for Image 1 | Caption for Image 2 |
+
 ## Features
 - Import vertex plot points from a CSV file as a mesh.
 - Creates a mesh with connected edges or faces based on the imported points.
@@ -28,7 +33,48 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 - **`Auto-Smooth(checkbox)`** Have it use the default auto-smooth shading on import.
 - **`Center Object(checkbox)`** This will center the object base on origin (middle of mesh usually) if unchecked it will be the coords from the RenderDoc capture location or default.
 - **`UV smart Unwrapping`** just does a unwrap, wanting to use the info from the csv file (under construction only for Stubbs atm)
- 
+
+### Stubbs the Zombie
+
+<details>
+<summary>Settings:</summary>
+
+- Scale: `10.0`
+- Connection Method: `Faces`
+- Format: `Stubbs The Zombie`
+- Auto-Smooth: `optional` `Auto-Smooth Shading 30°`
+- Center Object: `optional`
+- Beta: UV Unwrapping: `optional` `Smart UV Unwraps`
+</details>
+
+### Bioshock 1 & 2 + WHF + 
+
+<details>
+<summary>Settings:</summary>
+
+- Scale: `0.01` - `1.0`
+- Connection Method: `Faces`
+- Format: `Bioshock 1 & 2 + WHF +`
+- Auto-Smooth: `optional` `Auto-Smooth Shading 30°`
+- Center Object: `optional`
+</details>
+
+### Bioshock INF +
+
+<details>
+<summary>Settings:</summary>
+
+ `beta`
+> Scale: `0.01` - `1.0`
+
+> Connection Method: `Faces`
+
+> Format: `Bioshock 1 & 2 + WHF +`
+
+> Auto-Smooth: `optional` `Auto-Smooth Shading 30°`
+
+> Center Object: `optional`
+</details> 
 ## Credits
 - Author: `Jolly Joe`
 - Stable Version: 4.2.1
@@ -39,6 +85,7 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 
 `note:` `'Bioshock 1 & 2 + WHF +' should be the default when trying a new game not listed.` 
 
+`note:` `'Bioshock INF +' is only last resort its better to use Other in some cases.`
+
 [Game ⚙ List](/GameList.md)
 
-`note:` `'Bioshock INF +' is only last resort its better to use Other in some cases.`
