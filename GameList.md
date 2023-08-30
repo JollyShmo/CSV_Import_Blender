@@ -1,8 +1,5 @@
 # Games That Work
 `RenderDoc (csv file)` 
-
-+ 
-
 `CSV Mesh Importer (blender addon)`
 
 - Bendy
