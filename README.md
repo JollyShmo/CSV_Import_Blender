@@ -22,12 +22,12 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 - [`RenderDoc`](https://renderdoc.org/) A graphics debugger, which can be used to export the CSV files for importing.
 
 ## Options
-- **Scale Factor:** Scale the imported mesh.
-- **Connection Method:** Choose between connecting vertices with edges or faces.
-- **Format:** Choose between game sets or other. (Stubbs the Zombie, Bioshock 1 & 2 + WHF +, Bioshock INF +, Other)\
-- **Auto-Smooth(checkbox):** Have it use the default auto-smooth shading on import.
-- **Center Object(checkbox):** This will center the object base on origin (middle of mesh usually) if unchecked it will be the coords from the RenderDoc capture location or default.
-- **UV smart Unwrapping:** just does a unwrap, wanting to use the info from the csv file (under construction only for Stubbs atm)
+- **`Scale Factor`** Scale the imported mesh.
+- **`Connection Method`** Choose between connecting vertices with edges or faces.
+- **`Format`** Choose between game sets or other. (Stubbs the Zombie, Bioshock 1 & 2 + WHF +, Bioshock INF +, Other)
+- **`Auto-Smooth(checkbox)`** Have it use the default auto-smooth shading on import.
+- **`Center Object(checkbox)`** This will center the object base on origin (middle of mesh usually) if unchecked it will be the coords from the RenderDoc capture location or default.
+- **`UV smart Unwrapping`** just does a unwrap, wanting to use the info from the csv file (under construction only for Stubbs atm)
  
 ## Credits
 - Author: `Jolly Joe`
