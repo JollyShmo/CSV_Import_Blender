@@ -1,5 +1,5 @@
 # Games That Work
-`RenderDoc` + `CSV Importer (blender addon)`
+`RenderDoc (csv file export)` + `CSV Importer (blender 3d mesh import)`
 - Bendy
 - Bioshock 1
 - Bioshock 2
