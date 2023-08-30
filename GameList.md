@@ -1,4 +1,4 @@
-# Gmaes List
+# Games That Work
 `RenderDoc` + `CSV Importer (blender addon)`
 - Bendy
 - Bioshock 1
