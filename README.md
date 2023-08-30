@@ -1,4 +1,4 @@
-`click to download Blender addon 🔻`
+`click to download Blender addon 💾🔻`
 
 [![download](https://github.com/JollyShmo/CSV_Import_Blender/blob/main/version_csv_import.png)](https://github.com/JollyShmo/CSV_Import_Blender/releases/download/v4.2.1/csv_mesh_importer.zip)
 
@@ -19,13 +19,13 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 ## Programs
 | Blender |
 |---------|
-- [`Blender website`](https://www.blender.org)
-- [Download Blender](https://www.blender.org/download/release/Blender3.6/blender-3.6.2-windows-x64.msi/) The open-source 3D creation suite used to run the addon.
+🌐 [`Blender website`](https://www.blender.org)
+💾 [Download Blender](https://www.blender.org/download/release/Blender3.6/blender-3.6.2-windows-x64.msi/) The open-source 3D creation suite used to run the addon.
 
 | RenderDoc |
 |-----------|
-- [`RenderDoc website`](https://renderdoc.org/)
-- [Download RenderDoc x64](https://renderdoc.org/stable/1.28/RenderDoc_1.28_64.msi) A graphics debugger, which can be used to export the CSV files for importing to Blender.
+🌐 [`RenderDoc website`](https://renderdoc.org/)
+💾 [Download RenderDoc x64](https://renderdoc.org/stable/1.28/RenderDoc_1.28_64.msi) A graphics debugger, which can be used to export the CSV files for importing to Blender.
 
 ## Install Addon and Usage
 1. Download the addon by clicking the header CSV Mesh Importer picutre.
