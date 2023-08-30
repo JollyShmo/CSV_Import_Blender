@@ -19,7 +19,7 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 - [`Blender website`](https://www.blender.org)
 - [Download Blender](https://www.blender.org/download/release/Blender3.6/blender-3.6.2-windows-x64.msi/) The open-source 3D creation suite used to run the addon.
 - [`RenderDoc website`](https://renderdoc.org/)
-- [Download RenderDoc x64](https://renderdoc.org/stable/1.28/RenderDoc_1.28_64.msi) A graphics debugger, which can be used to export the CSV files for importing.
+- [Download RenderDoc x64](https://renderdoc.org/stable/1.28/RenderDoc_1.28_64.msi) A graphics debugger, which can be used to export the CSV files for importing to Blender.
 
 ## Install Addon and Usage
 1. Download the addon by clicking the header CSV Mesh Importer picutre.
@@ -34,13 +34,12 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 - **`Format`** Choose between game sets or other. (Stubbs the Zombie, Bioshock 1 & 2 + WHF +, Bioshock INF +, Other)
 - **`Auto-Smooth(checkbox)`** Have it use the default auto-smooth shading on import.
 - **`Center Object(checkbox)`** This will center the object base on origin (middle of mesh usually) if unchecked it will be the coords from the RenderDoc capture location or default.
-- **`UV smart Unwrapping`** just does a unwrap, wanting to use the info from the csv file (under construction only for Stubbs atm)
-
-
+- **`UV smart Unwrapping(checkbox)`** just does a smart unwrap (only for Stubbs The Zombie atm)
 
 <details>
 <summary>Stubbs the Zombie</summary>
 
+`Stubbs Only`
 - Scale: `10.0`
 - Connection Method: `Faces`
 - Format: `Stubbs The Zombie`
@@ -51,7 +50,8 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 
 <details>
 <summary>Bioshock 1 & 2 + WHF +</summary>
-
+ 
+ `main`
 - Scale: `0.01` - `1.0`
 - Connection Method: `Faces`
 - Format: `Bioshock 1 & 2 + WHF +`
