@@ -22,7 +22,7 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 5. Now, you can import CSV files containing vertex data by going to `File > Import' > 'CSV Mesh (.csv)`.
 
 ## Options
-- **`Scale Factor`** Scale the imported mesh.
+- **`Scale Factor`** Scale the imported mesh. (0.01 - 10.00)
 - **`Connection Method`** Choose between connecting vertices with edges or faces.
 - **`Format`** Choose between game sets or other. (Stubbs the Zombie, Bioshock 1 & 2 + WHF +, Bioshock INF +, Other)
 - **`Auto-Smooth(checkbox)`** Have it use the default auto-smooth shading on import.
