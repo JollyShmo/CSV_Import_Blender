@@ -85,6 +85,8 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 - Blender Compatibility: 2.93 or later
 - Category: Import
 
+**[Game ⚙ List](/GameList.md)**
+
 <details>
  <summary>More Info:</summary>
  
@@ -95,5 +97,4 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 `note:` `'Bioshock INF +' is only last resort its better to use Other in some cases.`
 </details>
 
-[Game ⚙ List](/GameList.md)
 
