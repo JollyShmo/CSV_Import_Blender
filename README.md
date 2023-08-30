@@ -11,8 +11,8 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 - Ability to select what column from the csv files for the coords for `POSITION.x, POSITION.y, POSITION.z` plus an option for 2 additional coords I call `POSITION.ux, POSITION.uy`. (This can be found in `Other`)
 
 ## Programs Used/Need
-- [`Blender`](https://www.blender.org) The open-source 3D creation suite used to run the addon.
-- [`RenderDoc`](https://renderdoc.org/) A graphics debugger, which can be used to export the CSV files for importing.
+- [`Blender website`](https://www.blender.org) [Download Blender](https://www.blender.org/download/) The open-source 3D creation suite used to run the addon.
+- [`RenderDoc website`](https://renderdoc.org/) [Download RenderDoc x64](https://renderdoc.org/stable/1.28/RenderDoc_1.28_64.msi) A graphics debugger, which can be used to export the CSV files for importing.
 
 ## Install Addon and Usage
 1. Download the addon by clicking the header CSV Mesh Importer picutre.
