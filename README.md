@@ -34,6 +34,7 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 5. Now, you can import CSV files containing vertex data by going to `File > Import' > 'CSV Mesh (.csv)`.
 
 ## Options
+
 <details>
  <summary>⚙ Addon Options</summary>
  
