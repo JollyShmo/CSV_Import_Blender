@@ -3,9 +3,9 @@
 
 This Blender addon allows you to import points from a CSV file and create a mesh by connected edges or faces. It's particularly useful for visualizing 3D point data captured using tools like 'RenderDoc' to export the CSV file.
 
-| Image 1             | Image 2             |
-| ------------------- | ------------------- |
-| ![Image 1](#)    | ![Image 2](#)    |
+| RenderDoc| Blender|
+| ---------| -------|
+| ![Image 1](https://github.com/JollyShmo/CSV_Import_Blender/blob/main/step1.png)    | ![Image 2](https://github.com/JollyShmo/CSV_Import_Blender/blob/main/step2%20(2).png?raw=true)    |
 | Caption for Image 1 | Caption for Image 2 |
 
 ## Features
