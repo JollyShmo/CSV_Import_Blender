@@ -73,7 +73,7 @@ This Blender addon allows you to import points from a CSV file and create a mesh
  
  `Main`
 | Title | Recommended Setting |
-| -- | -- |
+| :---- | :------------------ |
 | Scale: | `0.01` - `1.0`|
 | Connection Method: | `Faces`|
 | Format: | `Bioshock 1 & 2 + WHF +`|
