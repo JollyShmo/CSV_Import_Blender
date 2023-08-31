@@ -107,7 +107,7 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 | Stable Version:| `4.2.1` |
 | Blender Compatibility:| `2.93 or later` |
 | Category:| `Import` |
-| Compatibility List:| **[`💿 Game List`](/GameList.md)** |
+| Compatibility Game List:| **[`💿 Game List`](/GameList.md)** |
 
 <details>
 <summary><h3>📎 More Info:</h3></summary>
