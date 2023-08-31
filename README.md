@@ -86,17 +86,11 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 
  `beta`
 > Scale: `0.01` - `1.0`
-
 > Connection Method: `Faces`
-
 > Format: `Bioshock INF +`
-
 > Name Obj `optional` `default "Object"`
-
 > Clean Up Loose Geometry `Required to work as intended` `only uncheck to debug`
-
 > Auto-Smooth: `optional` `auto-smooth shading 30°`
-
 > Center Object: `optional` `mesh to 3d curser`
 </details> 
 
