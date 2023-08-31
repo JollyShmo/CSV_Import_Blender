@@ -2,7 +2,7 @@
 
 [![download](https://github.com/JollyShmo/CSV_Import_Blender/blob/main/version_csv_import.png)](https://github.com/JollyShmo/CSV_Import_Blender/releases/download/v4.2.1-beta/csv_mesh_importer.zip)
 
-This Blender addon allows you to import points from a CSV file and create a mesh by connected edges or faces. It's particularly useful for visualizing 3D point data captured using tools like 'RenderDoc' to export the CSV file. Works for a number of games including Bioshock Series.
+This Blender addon allows you to import points from a CSV file and create a mesh by connected edges or faces. It's particularly useful for visualizing 3D point data captured using tools like 'RenderDoc' to export the CSV file. Works for a number of games including Bioshock Series, We Happy Few, and mmore.
 
 | RenderDoc | Blender|
 | :-------- | :----- |
@@ -12,11 +12,11 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 ## Features
 🗃 Import vertex plot points from a CSV file as a mesh.
 
-📐 Creates a mesh with connected edges or faces based on the imported points.
+📐 Creates a mesh with connected edges or faces based on the settings.
 
-⛏ Automatically remove duplicate vertices and edges.
+⛏ Automatically remove duplicate vertices and edges with *Clean Up Loose Geometry*.
 
-😇 Corrects the normals to face outside.
+😇 Corrects the normals to face outside for you on import.
 
 🖇 Using `Other` to select what column from the csv files for the verts for *(POSITION.x, POSITION.y, POSITION.z)* plus an option for 2 additional verts *(TEXTURE.x, TEXTURE.y)*.
 
