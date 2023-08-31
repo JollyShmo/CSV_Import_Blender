@@ -104,7 +104,7 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 | Compatibility List: **[`💿 Game List`](/GameList.md)** |
 
 <details>
- <summary>📎 More Info:</summary>
+<summary><h3>📎 More Info:</h3></summary>
  
 `note:` ```This addon creates a mesh with connected edges or faces based on the imported points. It's important to review the results and refine the mesh as needed after import. This is optimized for games that work with RenderDoc and the csv files it can export.```
 
