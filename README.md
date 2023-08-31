@@ -14,7 +14,7 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 - Creates a mesh with connected edges or faces based on the imported points.
 - Automatically remove duplicate vertices and edges.
 - Corrects the normals to face outside.
-- Ability to select what column from the csv files for the coords for `POSITION.x, POSITION.y, POSITION.z` plus an option for 2 additional coords I call `POSITION.ux, POSITION.uy`. (This can be found in `Other`)
+- Ability to select what column from the csv files for the verts for `POSITION.x, POSITION.y, POSITION.z` plus an option for 2 additional verts `TEXTURE.x, TEXTURE.y`. (This can be found in `Other`)
 
 ## Programs Used
 | Blender 3.6 |
@@ -44,7 +44,7 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 - **`Format`** Choose between game sets or other. (Stubbs the Zombie, Bioshock 1 & 2 + WHF +, Bioshock INF +, Other)
 - **`Name Obj`** Name the mesh on import. (default "Object")
 - **`Auto-Smooth(checkbox)`** Have it use the default auto-smooth shading on import.
-- **`Center Object(checkbox)`** This will center the object base on origin (middle of mesh usually) if unchecked it will be the coords from the RenderDoc capture location.
+- **`Center Object(checkbox)`** This will center the object base on origin (middle of mesh usually) if unchecked it will be the verts from the RenderDoc capture location.
 - **`UV smart Unwrapping(checkbox)`** just does a smart unwrap (only for Stubbs The Zombie atm)
 </details>
 
