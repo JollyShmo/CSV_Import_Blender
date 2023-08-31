@@ -25,7 +25,7 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 | RenderDoc 1.28 |
 | :------------- |
 🌐 [`RenderDoc website`](https://renderdoc.org/)
-💾 [Download RenderDoc x64](https://renderdoc.org/stable/1.28/RenderDoc_1.28_64.msi) A graphics debugger, which can be used to export the CSV files for importing to Blender.
+💾 [Download RenderDoc x64](https://renderdoc.org/stable/1.28/RenderDoc_1.28_64.msi) A graphics debugger, which can be used to export the CSV files.
 
 ## Install Addon and Usage
 1. Download the addon by clicking the header CSV Mesh Importer picutre.
