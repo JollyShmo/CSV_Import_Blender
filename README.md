@@ -18,7 +18,7 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 
 😇 Corrects the normals to face outside.
 
-🖇 Using `Other` to select what column from the csv files for the verts for `POSITION.x, POSITION.y, POSITION.z` plus an option for 2 additional verts `TEXTURE.x, TEXTURE.y`.
+🖇 Using `Other` to select what column from the csv files for the verts for *(POSITION.x, POSITION.y, POSITION.z)* plus an option for 2 additional verts *(TEXTURE.x, TEXTURE.y)*.
 
 ## Programs Used
 | Blender 3.6 |
