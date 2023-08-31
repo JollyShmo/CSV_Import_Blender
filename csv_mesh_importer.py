@@ -151,15 +151,15 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
         name="CSV Format",
         items=[
             ('STUBBS', "Stubbs The Zombie", "CSV format for STZ"),
-            ('WE_HAPPY_FEW', "Bioshock 1 & 2 + WHF +", "CSV format that uses POS first"),
-            ('BIOSHOCK', "Bioshock INF +", "CSV format that use TAN first"),
+            ('WE_HAPPY_FEW', "Bioshock 1 & 2 + WHF +", "CSV format POS [2,3,4] [x,y,z]"),
+            ('BIOSHOCK', "Bioshock INF +", "CSV format POS [18,19,20] [x,y,z]"),
             ('OTHER', "Other", "For any csv file with x, y, z"),       
         ],
         default='STUBBS',
         description="Choose the CSV format",
     )
     beta_test: bpy.props.EnumProperty(
-        name="Beta:",
+        name="Beta",
         items=[
             ('NONE', "UV testing OFF", "No testing"),
             ('BETA', "UV testing ON", "UV testing"),
@@ -171,6 +171,7 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
     def draw(self, context):
         layout = self.layout
         scene = context.scene
+        
         # Inside the beta testing section
         if self.beta_test == 'BETA':
             self.report({'INFO'}, "This is beta ON.")        
@@ -190,7 +191,7 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
         layout.label(text="Scale Info:")
         layout.label(text=info)
 
-        # Layout for options
+        # Layout options
         if self.connection_method == 'FACES':
             layout.prop(self, "scale_factor")
         else:
@@ -217,11 +218,9 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
                 self.set_z = True
                 layout.prop(self, "pos_ux_column")
                 layout.prop(self, "pos_uy_column")          
-                #layout.prop(self, "set_z")
             else:
                 self.set_z = False
-
-            
+                
     def execute(self, context):
         try:
             with open(self.filepath, 'r', newline='', encoding='utf-8') as csvfile:
@@ -364,7 +363,6 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
                             for i in corner_indices:
                                 if i + 2 < len(vertices):
                                     bm.faces.new((bm.verts[i], bm.verts[i + 1], bm.verts[i + 2]))
-                    
                 # Update the BMesh and populate the mesh with BMesh data
                 bm.to_mesh(mesh)
                 bm.free()
@@ -372,18 +370,16 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
                 # Create a new object from the mesh
                 obj = bpy.data.objects.new(self.rename_option, mesh)
                 context.collection.objects.link(obj)
-                self.rename_option = ""
-                
+                self.rename_option = ""               
                 # Select the newly created object
                 bpy.context.view_layer.objects.active = obj
-                #obj.select_set(True)
-                
                 # Set object origin and scale
                 bpy.ops.object.select_all(action='DESELECT')
                 obj.select_set(True)
                 bpy.context.view_layer.objects.active = obj
                 bpy.ops.object.origin_set(type='ORIGIN_GEOMETRY', center='BOUNDS')
-                bpy.types.Scene.scale_factor = 1.0  # Adjust this line based on the property's actual name
+                # Adjust this line based on the property's actual name
+                bpy.types.Scene.scale_factor = 1.0
             # Merge by distance
             bpy.ops.object.mode_set(mode='EDIT')
             bpy.ops.mesh.select_all(action='SELECT')
@@ -403,39 +399,37 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
                 bpy.ops.mesh.select_all(action='SELECT')
                 bpy.ops.mesh.normals_make_consistent(inside=False)
                 bpy.ops.object.mode_set(mode='OBJECT')
+                
             # If Shade Smooth option checked
             if self.smooth_finish:
                 # Get the active object (selected object)
                 active_object = bpy.context.active_object
-
+                
                 if active_object and active_object.type == 'MESH':
                     # Access the object's mesh data
                     mesh = active_object.data
-                    
                     # Enable smooth shading for each polygon
                     for polygon in mesh.polygons:
-                        polygon.use_smooth = True
-                    
+                        polygon.use_smooth = True                    
                     # Set shading mode to smooth
                     bpy.ops.object.shade_smooth()
+                    
             # Scale checked
             if self.center_obj:
                 # Set object origin and scale
                 bpy.ops.object.location_clear(clear_delta=False)
+                
             # Inside the beta testing section
             if self.beta_test == 'BETA':
                 self.report({'INFO'}, "This is beta ON.")
-                # Step 1: Get the active object
+                # Get active object
                 active_obj = bpy.context.active_object
-
-                # Step 3: Switch to Edit Mode and perform smart UV unwrapping
+                # Switch to Edit Mode and perform smart UV unwrapping
                 bpy.context.view_layer.objects.active = active_obj
                 bpy.ops.object.mode_set(mode='EDIT')
                 bpy.ops.mesh.select_all(action='SELECT')
                 bpy.ops.uv.smart_project(angle_limit=66, island_margin=0.001)
                 bpy.ops.object.mode_set(mode='OBJECT')
-                
-                
             else:
                 self.report({'WARNING'}, "This is beta OFF")                
                 
@@ -444,11 +438,14 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
             
             # Configure material properties
             if self.csv_format == 'STUBBS':
-                material.diffuse_color = (0.375999, 0.782452, 0.15231, 1.0)  # Set the diffuse color Greenish
+                # Set the diffuse color Greenish
+                material.diffuse_color = (0.375999, 0.782452, 0.15231, 1.0)  
             elif self.csv_format == 'BIOSHOCK':
-                material.diffuse_color = (0.066149, 0.255212, 0.979846, 1.0)  # Set the diffuse color Blueish
+                # Set the diffuse color Blueish
+                material.diffuse_color = (0.066149, 0.255212, 0.979846, 1.0)  
             elif self.csv_format == 'WE_HAPPY_FEW':
-                material.diffuse_color = (0.979846, 0.907275, 0.065402, 1.0)  # Set the diffuse color Yellowish
+                # Set the diffuse color Yellowish
+                material.diffuse_color = (0.979846, 0.907275, 0.065402, 1.0)  
             else:
                 material.diffuse_color = (0.8, 0.5, 0.8, 1.0)
             # Assign the material to the mesh
@@ -457,23 +454,22 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
             bpy.ops.text.new()
             text = bpy.data.texts[-1]
             
-            # Write UV coordinates to the text object
+            # Write UV coordinates to text
             uv_text = "UV Coordinates:\n"
             for uv_coords in uv:
                 uv_text += f"({uv_coords[0]}, {uv_coords[1]}, {uv_coords[2]})\n"
             
-            # Write vertices to the text object
+            # Write vertices to text
             text.write("Vertices:\n")
             for vertex in vertices:
                 text.write("({}, {}, {})\n".format(vertex[0], vertex[1], vertex[2]))
-            # Append the UV text to the text object
+            # Append the UV text to text 
             text.write(uv_text)
             
-            # END OF LINE
+            # END OF PROGRAM
         except Exception as e:
             self.report({'ERROR'}, str(e))
             return {'CANCELLED'}
-        # Finish message
         self.report({'INFO'}, "Mesh imported successfully.")
         return {'FINISHED'}
 
