@@ -52,7 +52,7 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 
 ## Formats
 <details>
-<summary>Stubbs the Zombie</summary>
+<summary>🧟‍♂️Stubbs the Zombie</summary>
 
 `Stubbs The Zombie Game Only`
 
@@ -69,7 +69,7 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 </details>
 
 <details>
-<summary>Bioshock 1 & 2 + WHF +</summary>
+<summary>🤯Bioshock 1 & 2 + WHF +</summary>
  
  `Main`
 | Title | Recommended Setting |
@@ -84,7 +84,7 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 </details>
 
 <details>
-<summary>Bioshock INF +</summary>
+<summary>🦺Bioshock INF +</summary>
 
  `beta`
 > Scale: `0.01` - `1.0`
