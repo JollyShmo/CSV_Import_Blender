@@ -79,7 +79,6 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
         name="Clean Up Loose Geometry",
         default=True,
         description="Lets you clean up geometry by selecting the loose edges. (Recomended for most imports)",
-        #options={'HIDDEN'},
     )
     
     center_obj: bpy.props.BoolProperty(
@@ -142,11 +141,13 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
         options={'HIDDEN'},
 
     )
+    
     smooth_finish: bpy.props.BoolProperty(
         name="Shade Smooth",
         default=False,
         description="Auto Smooth Finish",
     )
+    
     csv_format: bpy.props.EnumProperty(
         name="CSV Format",
         items=[
@@ -158,6 +159,7 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
         default='STUBBS',
         description="Choose the CSV format",
     )
+    
     beta_test: bpy.props.EnumProperty(
         name="Beta",
         items=[
