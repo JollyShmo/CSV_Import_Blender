@@ -10,11 +10,11 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 |`Export` the VS Input csv file | `Import` the csv file into Blender |
 
 ## Features
-- Import vertex plot points from a CSV file as a mesh.
-- Creates a mesh with connected edges or faces based on the imported points.
-- Automatically remove duplicate vertices and edges.
-- Corrects the normals to face outside.
-- Ability to select what column from the csv files for the verts for `POSITION.x, POSITION.y, POSITION.z` plus an option for 2 additional verts `TEXTURE.x, TEXTURE.y`. (This can be found in `Other`)
+🗃 Import vertex plot points from a CSV file as a mesh.
+📐 Creates a mesh with connected edges or faces based on the imported points.
+⛏ Automatically remove duplicate vertices and edges.
+😇 Corrects the normals to face outside.
+🖇 Using `Other` to select what column from the csv files for the verts for `POSITION.x, POSITION.y, POSITION.z` plus an option for 2 additional verts `TEXTURE.x, TEXTURE.y`.
 
 ## Programs Used
 | Blender 3.6 |
