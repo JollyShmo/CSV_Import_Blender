@@ -50,13 +50,13 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
     bl_label = "Import CSV Mesh"
     bl_description = "Import points from a CSV file and create a mesh with connected edges or faces."
     bl_options = {'REGISTER', 'UNDO'}
-    
+
     filter_glob: bpy.props.StringProperty(
         default="*.csv",
         options={'HIDDEN'},
         maxlen=255,
     )
-    
+    # Scale factor
     scale_factor: bpy.props.FloatProperty(
         name="Scale Factor",
         default=1.0,
@@ -64,7 +64,7 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
         min=0.01,
         max=10.0,
     )
-    
+    # Connection method
     connection_method: bpy.props.EnumProperty(
         name="Connection Method",
         items=[
@@ -74,92 +74,91 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
         default='FACES',
         description="Method for connecting vertices with faces"
     )
-    
+    # Clean up loose geometry check
     cleanup_check: bpy.props.BoolProperty(
         name="Clean Up Loose Geometry",
         default=True,
         description="Lets you clean up geometry by selecting the loose edges. (Recomended for most imports)",
     )
-    
+    # Center object
     center_obj: bpy.props.BoolProperty(
         name="Center Object",
         default=False,
         description="Centers the Object, otherwise it will be places as it was during the RenderDoc Capture.",
     )
-
+    # Hide uv options
     hide_option_uv: bpy.props.BoolProperty(
         name="Hide UV options",
         default=True,
         description="Hide UV options.",
     )
-        
+    # rename mesh
     rename_option: bpy.props.StringProperty(
         name="Obj Name",
         default="",
         description="Rename the object.",
     )
-    
+    # Position x
     pos_x_column: bpy.props.IntProperty(
         name="POSITION.x",
         default=2,
         description="Column index for X coordinate",
         min=0,
     )
-
+    # Position y
     pos_y_column: bpy.props.IntProperty(
         name="POSITION.y",
         default=3,
         description="Column index for Y coordinate",
         min=0,
     )
-
+    # Position z
     pos_z_column: bpy.props.IntProperty(
         name="POSITION.z",
         default=4,
         description="Column index for Z coordinate",
         min=0,
     )
-    
+    # Texture x
     pos_ux_column: bpy.props.IntProperty(
         name="TEXTURE.x",
         default=5,
         description="Column index for uv X coordinate",
         min=0,
     )
-
+    # Texture y
     pos_uy_column: bpy.props.IntProperty(
         name="TEXTURE.y",
         default=6,
         description="Column index for uv Y coordinate",
         min=0,
     )
-    
+    # Set z
     set_z: bpy.props.BoolProperty(
         name="Set TEXCOORD.z = 1.0",
         default=True,
         description="Set texture Coordinate to Z = 1.0",
         options={'HIDDEN'},
-
     )
-    
+    # Shade smooth
     smooth_finish: bpy.props.BoolProperty(
         name="Shade Smooth",
         default=False,
         description="Auto Smooth Finish",
     )
-    
+    # Csv format
     csv_format: bpy.props.EnumProperty(
         name="CSV Format",
         items=[
-            ('STUBBS', "Stubbs The Zombie", "CSV format for STZ"),
+            ('STUBBS', "Stubbs The Zombie", "CSV format for Stubbs The Zombie POS [2,3,4] [x,y,z]"),
             ('WE_HAPPY_FEW', "Bioshock 1 & 2 + WHF +", "CSV format POS [2,3,4] [x,y,z]"),
             ('BIOSHOCK', "Bioshock INF +", "CSV format POS [18,19,20] [x,y,z]"),
-            ('OTHER', "Other", "For any csv file with x, y, z"),       
+            ('OTHER', "Other", "For any csv file with x, y, z"),
         ],
         default='STUBBS',
         description="Choose the CSV format",
     )
-    
+    # Beta test uv unwrapping 
     beta_test: bpy.props.EnumProperty(
         name="Beta",
         items=[
@@ -340,7 +339,6 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
                         for i in corner_indices:
                             if i + 1 < len(vertices):
                                 bm.edges.new((bm.verts[i], bm.verts[i + 1]))
-
                 # Faces
                 elif self.connection_method == 'FACES':
                     if len(vertices) >= 3:
