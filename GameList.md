@@ -7,7 +7,7 @@
 *(Games on the list? means it didn't work for me in `RenderDoc`. NOT on the list I don't own it so I cannot test it. 
 
 But you can! submit a screenshot and a little info on the game. still a work in progress. 
-[here](https://github.com/JollyShmo/CSV_Import_Blender/discussions/new?category=show-and-tell)*
+[`➕ Show and Tell`](https://github.com/JollyShmo/CSV_Import_Blender/discussions/new?category=show-and-tell)
 
 | Game Title | Status |
 |---|:---:|
