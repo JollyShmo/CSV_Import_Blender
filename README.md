@@ -52,7 +52,7 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 <details>
 <summary>Stubbs the Zombie</summary>
 
-`Stubbs Only`
+`Stubbs The Zombie Game Only`
 
 | Title | Recommended Setting |
 | -- | -- |
