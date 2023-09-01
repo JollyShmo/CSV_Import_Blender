@@ -155,7 +155,7 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
             ('BIOSHOCK', "Bioshock INF +", "CSV format POS [18,19,20] [x,y,z]"),
             ('OTHER', "Other", "For any csv file with x, y, z"),
         ],
-        default='STUBBS',
+        default='WE_HAPPY_FEW',
         description="Choose the CSV format",
     )
     # Beta test uv unwrapping 
