@@ -18,7 +18,7 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 
 😇 Corrects the normals to face outside for you on import.
 
-🖇 Using `Other` to select what column from the csv files for the verts for *(POSITION.x, POSITION.y, POSITION.z)* plus an option for 2 additional verts *(TEXTURE.x, TEXTURE.y)*.
+🖇 Option `Other` to select what column from the csv files for the verts for *(POSITION.x, POSITION.y, POSITION.z)* plus an option for 2 additional verts *(TEXTURE.x, TEXTURE.y)*. 
 
 ## Programs Used
 | Blender 3.6 |
@@ -38,7 +38,7 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 4. Check the box to have it apply the changes `[✔]`.
 5. Now, you can import CSV files containing vertex data by going to `File > Import' > 'CSV Mesh (.csv)`.
 
-## Options
+## Settings
 
 <details>
  <summary>⚙ Addon Options</summary>
@@ -110,13 +110,15 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 | Compatibility Game List:| **[`💿 Game List`](/GameList.md)** |
 
 <details>
-<summary><h3>📎 More Info:</h3></summary>
- 
-`note:` ```This addon creates a mesh with connected edges or faces based on the imported points. It's important to review the results and refine the mesh as needed after import. This is optimized for games that work with RenderDoc and the csv files it can export.```
+<summary><h3> ⚠ More Info:</h3></summary>
 
-`note:` `'Bioshock 1 & 2 + WHF +' should be the default when trying a new game not listed.` 
+`notes:` ```This addon creates a mesh with connected edges or faces based on the imported points. It's important to review the results and refine the mesh as needed after import. This is optimized for games that work with RenderDoc and the csv files it can export.```
 
-`note:` `'Bioshock INF +' is only last resort its better to use Other in some cases.`
+`[Bioshock 1 & 2 + WHF +] should be the default when trying a new game not listed.` 
+
+`[Bioshock INF +] is only last resort. It is better to use Other in some cases.`
+
+`(TEXTURE.x, TEXTURE.y) currently only works under [Other]`
 </details>
 
 
