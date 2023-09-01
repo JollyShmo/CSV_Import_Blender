@@ -56,6 +56,21 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 
 ## Formats
 <details>
+<summary>🤯Bioshock 1 & 2 + WHF +</summary>
+ 
+ `✔ Main Choice`
+| Title | Recommended Setting |
+| :---- | :------------------ |
+| Scale: | `0.01` - `1.0`|
+| Connection Method: | `Faces`|
+| Format: | `Bioshock 1 & 2 + WHF +`|
+| Name Obj: | `optional` `default "Object"`|
+| Clean Up Loose Geometry: | `Required to work as intended` `only uncheck to debug`|
+| Auto-Smooth: | `optional` `auto-smooth shading 30°`|
+| Center Object: | `optional` `mesh to 3d curser`|
+</details>
+<details>
+ 
 <summary>🧟‍♂️Stubbs the Zombie</summary>
 
 `⚠ Stubbs The Zombie Game Only`
@@ -70,21 +85,6 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 | Auto-Smooth: | `optional` `auto-smooth shading 30°`|
 | Center Object: | `optional`|
 | Beta: UV Unwrapping: |⚠ `optional` `smart uv unwraps`|
-</details>
-
-<details>
-<summary>🤯Bioshock 1 & 2 + WHF +</summary>
- 
- `✔ Main Choice`
-| Title | Recommended Setting |
-| :---- | :------------------ |
-| Scale: | `0.01` - `1.0`|
-| Connection Method: | `Faces`|
-| Format: | `Bioshock 1 & 2 + WHF +`|
-| Name Obj: | `optional` `default "Object"`|
-| Clean Up Loose Geometry: | `Required to work as intended` `only uncheck to debug`|
-| Auto-Smooth: | `optional` `auto-smooth shading 30°`|
-| Center Object: | `optional` `mesh to 3d curser`|
 </details>
 
 <details>
