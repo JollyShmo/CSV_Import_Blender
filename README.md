@@ -2,7 +2,7 @@
 
 [![download](https://github.com/JollyShmo/CSV_Import_Blender/blob/main/version_csv_import.png)](https://github.com/JollyShmo/CSV_Import_Blender/releases/download/v4.2.1-beta/csv_mesh_importer.zip)
 
-This Blender addon allows you to import points from a CSV file and create a mesh by connected edges or faces. It's particularly useful for visualizing 3D point data captured using tools like 'RenderDoc' to export the CSV file. Works for a number of games including Bioshock Series, We Happy Few, and mmore.
+This Blender addon allows you to import a CSV file and it will auto create a 3d mesh by connected points, edges and faces. It's particularly useful for visualizing 3D point data captured using tools like 'RenderDoc' to export the CSV file. Works for a number of games including Bioshock Series, We Happy Few, and more.
 
 | RenderDoc | Blender|
 | :-------- | :----- |
@@ -112,13 +112,17 @@ This Blender addon allows you to import points from a CSV file and create a mesh
 <details>
 <summary><h3> ⚠ More Info:</h3></summary>
 
-`notes:` ```This addon creates a mesh with connected edges or faces based on the imported points. It's important to review the results and refine the mesh as needed after import. This is optimized for games that work with RenderDoc and the csv files it can export.```
+`notes:` 
 
-`[Bioshock 1 & 2 + WHF +] should be the default when trying a new game not listed.` 
+>```This addon creates a mesh with connected edges or faces based on the imported points. It's important to review the results and refine the mesh as needed after import.```
 
-`[Bioshock INF +] is only last resort. It is better to use Other in some cases.`
+```⚠ This is optimized for games that work with RenderDoc and the csv files it can export.```
 
-`(TEXTURE.x, TEXTURE.y) currently only works under [Other]`
+- `Custom Imports: [Bioshock 1 & 2 + WHF +] should be the default when trying a new game not listed. You can also use [Other].` 
+
+- `[Bioshock INF +] is only last resort. It is better to use Other in some cases.`
+
+- `(TEXTURE.x, TEXTURE.y) currently only works under [Other]!`
 </details>
 
 
