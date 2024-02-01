@@ -4,7 +4,8 @@
 #   Description: Import points from a CSV file and create a mesh with connected edges or faces.
 #   Author: Jolly Joe
 #   Version: 4.2.1
-#   Blender: 3.6.0
+#   Blender: 4.0.0
+#   RenderDoc: 1.31
 #   Category: Import-Export
 #
 #   Usage Instructions:
@@ -39,7 +40,7 @@ bl_info = {
     "name": "CSV Mesh Importer",
     "author": "Jolly Joe",
     "version": (4, 2, 1),
-    "blender": (3, 6, 0),
+    "blender": (4, 0, 0),
     "location": "File > Import",
     "description": "Import points from a CSV file and create a mesh with connected edges or faces.",
     "category": "Import-Export",
@@ -172,14 +173,14 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
     def draw(self, context):
         layout = self.layout
         scene = context.scene
-        
+
         # Inside the beta testing section
         if self.beta_test == 'BETA':
             self.report({'INFO'}, "This is beta ON.")        
         else:
             #layout.prop(self, "csv_file_preview")
             self.report({'WARNING'}, "This is beta OFF")
-    
+
         if self.csv_format == 'STUBBS':
             info = scene.get("readme_info", "Stubbs The Zombie: 1.0 - 10.0")
         elif self.csv_format == 'WE_HAPPY_FEW':
@@ -208,7 +209,7 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
             layout.prop(self, "beta_test")
         else:
             self.beta_test = 'NONE'
-        
+
         if self.csv_format == 'OTHER':
             layout.prop(self, "pos_x_column")
             layout.prop(self, "pos_y_column")
@@ -221,7 +222,7 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
                 layout.prop(self, "pos_uy_column")          
             else:
                 self.set_z = False
-                
+
     def execute(self, context):
         try:
             with open(self.filepath, 'r', newline='', encoding='utf-8') as csvfile:
@@ -263,12 +264,12 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
                 else:
                     self.report({'ERROR'}, "Invalid CSV format")
                     return {'CANCELLED'}
-                
+
                 next(reader)
                 
                 vertices = []
                 uv = []
-                
+
                 for row in reader:                        
                     x = float(row[headers['POSITION.x']])
                     y = float(row[headers['POSITION.y']])
@@ -293,7 +294,7 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
                         uv.append((tx, ty, 1.0))
                     # BIO UV
                     elif self.csv_format == 'BIOSHOCK':
-                        
+
                         if self.hide_option_uv == False:
                             self.hide_option_uv = False
                             tx = float(row[headers['TEXCOORD0.x']])
@@ -314,7 +315,7 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
                             ty = float(row[headers['TEXCOORD.y']])
                             uv.append((tx, ty, 1.0))
                             vertices.append((x * self.scale_factor, y * self.scale_factor, z * self.scale_factor))
-                            
+
                 mesh = bpy.data.meshes.new("CSV_Mesh")
                 bm = bmesh.new()
                 
@@ -345,7 +346,7 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
                         if self.csv_format == 'STUBBS':
                             for i in range(len(vertices) - 2):
                                 bm.faces.new((bm.verts[i], bm.verts[i + 1], bm.verts[i + 2]))
-                                   
+
                         elif self.csv_format == 'WE_HAPPY_FEW':
                             corner_indices = list(range(0, len(vertices) - 2, 3))
                             for i in corner_indices:
@@ -385,7 +386,7 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
             bpy.ops.mesh.select_all(action='SELECT')
             bpy.ops.mesh.remove_doubles(threshold=0.001)
             bpy.ops.object.mode_set(mode='OBJECT')
-            
+
             # If Clean up loose geometry option checked
             if self.cleanup_check:
                 bpy.ops.object.mode_set(mode='EDIT')
@@ -399,12 +400,12 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
                 bpy.ops.mesh.select_all(action='SELECT')
                 bpy.ops.mesh.normals_make_consistent(inside=False)
                 bpy.ops.object.mode_set(mode='OBJECT')
-                
+
             # If Shade Smooth option checked
             if self.smooth_finish:
                 # Get the active object (selected object)
                 active_object = bpy.context.active_object
-                
+
                 if active_object and active_object.type == 'MESH':
                     # Access the object's mesh data
                     mesh = active_object.data
@@ -413,12 +414,12 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
                         polygon.use_smooth = True                    
                     # Set shading mode to smooth
                     bpy.ops.object.shade_smooth()
-                    
+
             # Scale checked
             if self.center_obj:
                 # Set object origin and scale
                 bpy.ops.object.location_clear(clear_delta=False)
-                
+
             # Inside the beta testing section
             if self.beta_test == 'BETA':
                 self.report({'INFO'}, "This is beta ON.")
@@ -432,7 +433,7 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
                 bpy.ops.object.mode_set(mode='OBJECT')
             else:
                 self.report({'WARNING'}, "This is beta OFF")                
-                
+
             # Create a new material
             material = bpy.data.materials.new(name="Material")
             
@@ -453,19 +454,19 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
             # Show CSV plot points in a text window
             bpy.ops.text.new()
             text = bpy.data.texts[-1]
-            
+
             # Write UV coordinates to text
             uv_text = "UV Coordinates:\n"
             for uv_coords in uv:
                 uv_text += f"({uv_coords[0]}, {uv_coords[1]}, {uv_coords[2]})\n"
-            
+
             # Write vertices to text
             text.write("Vertices:\n")
             for vertex in vertices:
                 text.write("({}, {}, {})\n".format(vertex[0], vertex[1], vertex[2]))
             # Append the UV text to text 
             text.write(uv_text)
-            
+
             # END OF PROGRAM
         except Exception as e:
             self.report({'ERROR'}, str(e))
