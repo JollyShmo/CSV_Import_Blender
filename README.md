@@ -10,9 +10,9 @@ This Blender addon allows you to import a CSV file and it will auto create a 3d 
 |`Export` the VS Input csv file | `Import` the csv file into Blender |
 
 ## Features
-🗃 Import vertex plot points from a CSV file as a mesh.
+🗃 Import vertex plot points from a CSV file as a 3d mesh object.
 
-📐 Creates a mesh with connected edges or faces based on the settings.
+📐 Creates the mesh by connecting edges and faces based on the settings.
 
 ⛏ Automatically remove duplicate vertices and edges with *Clean Up Loose Geometry*.
 
