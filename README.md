@@ -1,4 +1,5 @@
-`click to download Blender addon 💾🔻`
+`click to download Blender addon 💾🔻` 
+> *Updated 1/31/2024*
 
 [![download](https://github.com/JollyShmo/CSV_Import_Blender/blob/main/version_csv_import.png)](https://github.com/JollyShmo/CSV_Import_Blender/releases/download/v4.2.1-beta/csv_mesh_importer.zip)
 
@@ -20,16 +21,16 @@ This Blender addon allows you to import a CSV file and it will auto create a 3d 
 
 🖇 Option `Other` to select what column from the csv files for the verts for *(POSITION.x, POSITION.y, POSITION.z)* plus an option for 2 additional verts *(TEXTURE.x, TEXTURE.y)*. 
 
-## Programs Used
-| Blender 3.6 |
+## Programs Used:
+| Blender 4.0 |
 | :---------- |
 🌐 [`Blender website`](https://www.blender.org)
-💾 [Download Blender](https://www.blender.org/download/release/Blender3.6/blender-3.6.2-windows-x64.msi/) The open-source 3D creation suite used to run the addon.
+💾 [Download Blender](https://www.blender.org/download/release/Blender4.0/blender-4.0.2-windows-x64.msi/) The open-source 3D creation suite used to run the addon.
 
-| RenderDoc 1.28 |
+| RenderDoc 1.31 |
 | :------------- |
 🌐 [`RenderDoc website`](https://renderdoc.org/)
-💾 [Download RenderDoc x64](https://renderdoc.org/stable/1.28/RenderDoc_1.28_64.msi) A versitile graphics debugger, which can also be used to export the CSV files.
+💾 [Download RenderDoc x64](https://renderdoc.org/stable/1.31/RenderDoc_1.31_64.msi) A versitile graphics debugger, which can also be used to export the CSV files.
 
 ## Install Addon and Usage
 1. Download the addon by clicking the header CSV Mesh Importer v4.2.1 picutre.
