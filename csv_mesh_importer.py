@@ -27,7 +27,7 @@
 #   - Original addon by Jolly Joe
 #
 #   Contact:
-#   - Astralpathfinder@protonmail.com
+#   - codewizardjolly@protonmail.com
 ##########################################################
 
 import bpy
