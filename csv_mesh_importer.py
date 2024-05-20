@@ -160,7 +160,7 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
             ('NONE', "◌ UV Unwrap OFF", "No testing"),
         ],
         default='BETA',
-        description="Testing and Debugging"
+        description="Beta: UV unwrapping and mapping"
     )
     
     def draw(self, context):
@@ -204,8 +204,6 @@ class CSVMeshImporterOperator(bpy.types.Operator, ImportHelper):
                 layout.prop(self, "pos_uy_column")  
             else:
                 self.hide_option_uv = False
-        else:
-            self.hide_option_uv = False      
                          
     def execute(self, context):
         try:
