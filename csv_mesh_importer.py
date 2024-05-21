@@ -3,7 +3,7 @@
 #
 #   Description: Import points from a CSV file and create a mesh with connected edges or faces.
 #   Author: Jolly Joe
-#   Version: 4.2.1
+#   Version: 4.2.2
 #   Blender: 4.0.0
 #   Category: Import-Export
 #
