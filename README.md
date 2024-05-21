@@ -106,7 +106,7 @@ This Blender addon allows you to import a CSV file and it will auto create a 3d 
 
 | Author: | `Jolly Joe` |
 | :-------| :---------- |
-| Stable Version:| `4.2.1` |
+| Stable Version:| `4.2.2` |
 | Blender Compatibility:| `2.93 or later` |
 | Category:| `Import/Export` |
 | Compatibility Game List:| **[`💿 Game List`](/GameList.md)** |
